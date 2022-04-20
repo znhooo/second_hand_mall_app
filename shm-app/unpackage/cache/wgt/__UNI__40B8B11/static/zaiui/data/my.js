@@ -17,22 +17,6 @@ let _my_data = {
 			icon: 'moneybag',
 			name: '借钱'
 		},{
-			id: 5,
-			icon: 'read',
-			name: '平台规则'
-		},{
-			id: 6,
-			icon: 'notification',
-			name: '活动报名'
-		},{
-			id: 7,
-			icon: 'redpacket',
-			name: '领新人红包'
-		},{
-			id: 8,
-			icon: 'vipcard',
-			name: '办信用卡'
-		},{
 			id: 9,
 			icon: 'scan',
 			name: '活动扫码'

@@ -20,16 +20,6 @@
 				<view @tap="toPage('resetpasswd')">忘记密码</view>
 			</view>
 		</view>
-		<!-- 第三方登录 -->
-		<view class="oauth" v-if="isShowOauth">
-			<view class="text">— 快速登录 —</view>
-			<view class="list">
-				<view @tap="oauthLogin('weixin')" v-if="showProvider.weixin" class="icon weixin"></view>
-				<view @tap="oauthLogin('qq')" v-if="showProvider.qq" class="icon qq"></view>
-				<view @tap="oauthLogin('sinaweibo')" v-if="showProvider.sinaweibo" class="icon sinaweibo"></view>
-				<!-- <view @tap="oauthLogin('xiaomi')" v-if="showProvider.xiaomi" class="icon xiaomi"></view> -->
-			</view>
-		</view>
 	</view>
 </template>
 
@@ -67,63 +57,8 @@ import {
 		}, 
 		methods: {
 			...mapMutations(['login']),
-			oauthLogin(provider){
-				uni.showLoading();
-				//第三方登录
-				uni.login({
-					provider: provider,
-					success: (loginRes)=>{
-						console.log("success: "+JSON.stringify(loginRes));
-						//案例直接获取用户信息，一般不是在APP端直接获取用户信息，比如微信，获取一个code，传递给后端，后端再去请求微信服务器获取用户信息
-						uni.getUserInfo({
-							provider: provider,
-							success: (infoRes)=>{
-								console.log('用户信息：' + JSON.stringify(infoRes.userInfo));
-								uni.setStorage({
-									key: 'UserInfo',
-									data: {
-										username:infoRes.userInfo.nickName,
-										face:infoRes.userInfo.avatarUrl,
-										signature:'个性签名',
-										integral:0,
-										balance:0,
-										envelope:0
-									},
-									success: function () {
-										uni.hideLoading()
-										this.$refs.uToast.show({
-											message:'登陆成功',
-											type:'success'
-										})
-										setTimeout(function(){
-											uni.navigateBack();
-										},300)
-									}
-								});
-							},
-						});
-					},
-					fail:(e)=>{
-						console.log("fail: "+JSON.stringify(e));
-					}
-				});
-			},
-			getProvider(){
-				//获取第三方登录服务
-				uni.getProvider({
-					service: 'oauth',
-					success: (res)=>{
-						let len = res.provider.length;
-						for(let i=0;i<len;i++){
-							//有服务才显示按钮图标
-							this.showProvider[res.provider[i]] = true;
-						}
-						if(res.provider.length==0){
-							this.isShowOauth=false;
-						}
-					}
-				});
-			},
+			
+			
 			toPage(page){
 				uni.hideKeyboard()
 				uni.navigateTo({

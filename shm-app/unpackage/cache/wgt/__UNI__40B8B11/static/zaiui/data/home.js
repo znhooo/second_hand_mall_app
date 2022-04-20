@@ -224,23 +224,14 @@ let _home_data = {
 	goodsTab() {
 		return [
 			{
-				title: '看推荐',
+				title: '推荐',
 				tag: '',
 			},
 			{
-				title: '逛附近',
+				title: '最新',
 				tag: '',
 			},
-			{
-				title: '直播',
-				tag: '秒杀中',
-			},{
-				title: '实惠好货',
-				tag: '',
-			},{
-				title: '短视频',
-				tag: '',
-			}
+			
 		];
 	},
 	goodsList() {
