@@ -1,0 +1,75 @@
+{
+	"pages": [
+		{"path": "pages/app/index"},
+		{"path": "pages/home/sort"},
+		{"path": "pages/home/search"},
+		{"path": "pages/home/sort_list"},
+		{"path": "pages/goods/reward"},
+		{"path": "pages/goods/second_hand"},
+		{"path": "pages/goods/second_terrace"},
+		{"path": "pages/goods/settlement"},
+		{"path": "pages/goods/pay"},
+		{"path": "pages/status/pay_status"},
+		{"path": "pages/news/notice"},
+		{"path": "pages/news/details"},
+		{"path": "pages/news/chat"},
+		{"path": "pages/my/footmark"},
+		{"path": "pages/my/login"},
+		{"path": "pages/my/set-up"},
+		{"path": "pages/my/personal-data"},
+		{"path": "pages/my/edit-name"},
+		{"path": "pages/my/edit-synopsis"},
+		{"path": "pages/my/address"},
+		{"path": "pages/my/edit-address"},
+		{"path": "pages/my/add-address"},
+		{"path": "pages/my/edit-phone"},
+		{"path": "pages/my/edit-email"},
+		{"path": "pages/my/contact-cards"},
+		{"path": "pages/my/region"},
+		{"path": "pages/real_name/index"},
+		{"path": "pages/real_name/form"},
+		{"path": "pages/order/list"},
+		{"path": "pages/order/whereabouts"},
+		{"path": "pages/order/details"},
+		{"path": "pages/order/sell-details"},
+		{"path": "pages/order/appraise"},
+		{"path": "pages/order/view_appraise"},
+		{"path": "pages/order/add_appraise"},
+        {"path": "pages/my/register"},
+		{"path": "pages/my/myRelease"},
+		{"path": "pages/goods/update"},
+		{"path": "pages/goods/sell-contact"},
+		{"path": "pages/goods/check-address"},
+		{
+            "path" : "pages/test",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/goods/search_result",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }       
+        }
+        ,{"path" : "pages/goods/release"}
+    ],
+	"globalStyle": {
+		"navigationStyle": "custom",
+		"mp-alipay": {
+			"allowsBounceVertical": "NO",
+			"transparentTitle": "always"
+		}
+	},
+	"style": {
+		"app-plus": {
+			"animationType": "pop-in",
+			"animationDuration": 300
+		}
+	}
+}
